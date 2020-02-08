@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import com.fardoush.mybusadmin.configs.HibernateConfig;
 
 @Configuration
-@ComponentScan(basePackages = {"com.fardoush.mybusadmin.configs"})
+@ComponentScan(basePackages = {"com.fardoush.mybusadmin.configs","com.fardoush.mybusadmin.services"})
 public class AppConfig {
 	
 	@Bean
