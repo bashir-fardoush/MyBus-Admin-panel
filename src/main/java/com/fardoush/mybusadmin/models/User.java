@@ -45,33 +45,6 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(String userName, String userType, String userEmail, String userPhone, boolean isApproved,
-			String userAddress, String joinDate, String resignDate) {
-		super();
-		this.userName = userName;
-		this.userType = userType;
-		this.userEmail = userEmail;
-		this.userPhone = userPhone;
-		this.isApproved = isApproved;
-		this.userAddress = userAddress;
-		this.joinDate = joinDate;
-		this.resignDate = resignDate;
-	}
-
-	public User(int userId, String userName, String userType, String userEmail, String userPhone, boolean isApproved,
-			String userAddress, String joinDate, String resignDate) {
-		super();
-		this.userId = userId;
-		this.userName = userName;
-		this.userType = userType;
-		this.userEmail = userEmail;
-		this.userPhone = userPhone;
-		this.isApproved = isApproved;
-		this.userAddress = userAddress;
-		this.joinDate = joinDate;
-		this.resignDate = resignDate;
-	}
-
 	public int getUserId() {
 		return userId;
 	}

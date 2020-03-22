@@ -43,35 +43,9 @@ public class Bus {
 	@JoinColumn(name="route_id")
 	private Route route;
 	
-	@OneToOne(mappedBy = "bus")
-	private Driver driver;
 
 	public Bus() {
 		
-	}
-
-	public Bus( String busName, String busType, boolean isActive, String busDescription, String openDate,
-			String closeDate) {
-		super();
-		
-		this.busName = busName;
-		this.busType = busType;
-		this.isActive = isActive;
-		this.busDescription = busDescription;
-		this.openDate = openDate;
-		this.closeDate = closeDate;
-	}
-	
-	public Bus(int busId, String busName, String busType, boolean isActive, String busDescription, String openDate,
-			String closeDate) {
-		super();
-		this.busId = busId;
-		this.busName = busName;
-		this.busType = busType;
-		this.isActive = isActive;
-		this.busDescription = busDescription;
-		this.openDate = openDate;
-		this.closeDate = closeDate;
 	}
 
 	public int getBusId() {
@@ -144,23 +118,5 @@ public class Bus {
 		this.route = route;
 	}
 
-	public Driver getDriver() {
-		return driver;
-	}
-
-	public void setDriver(Driver driver) {
-		this.driver = driver;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

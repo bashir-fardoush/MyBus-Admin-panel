@@ -40,39 +40,10 @@ public class Route {
 	
 	@Column(name="route_close_date", updatable=true, nullable=true)
 	private String closeDate;
-	
-	/*@ManyToMany(targetEntity = Stoppage.class, cascade = CascadeType.ALL)
-	@JoinTable(name = "route_stoppage",
-		joinColumns = @JoinColumn(name="route_id", referencedColumnName = "route_id"),
-		inverseJoinColumns = @JoinColumn(name="stoppage_id", referencedColumnName = "stoppage_id"))
-	private List<Stoppage> stoppageList;*/
-	
-	@OneToMany(mappedBy = "route", cascade = CascadeType.ALL)
-	private List<RouteStoppage> routeStoppages;
-	
-	
+		
 	public Route() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-
-	public Route(int routeId, String routeTitle, boolean isActive, String openDate, String closeDate) {
-		super();
-		this.routeId = routeId;
-		this.routeTitle = routeTitle;
-		this.isActive = isActive;
-		this.openDate = openDate;
-		this.closeDate = closeDate;
-	}
-	
-
-	public Route( String routeTitle, boolean isActive, String openDate, String closeDate) {
-		super();
-		
-		this.routeTitle = routeTitle;
-		this.isActive = isActive;
-		this.openDate = openDate;
-		this.closeDate = closeDate;
 	}
 
 	public int getRouteId() {
@@ -115,26 +86,12 @@ public class Route {
 		this.closeDate = closeDate;
 	}
 
-	public List<RouteStoppage> getRouteStoppages() {
-		return routeStoppages;
-	}
-
-	public void setRouteStoppages(List<RouteStoppage> routeStoppages) {
-		this.routeStoppages = routeStoppages;
-	}
-
 	@Override
 	public String toString() {
 		return "Route [routeId=" + routeId + ", routeTitle=" + routeTitle + ", isActive=" + isActive + ", openDate="
-				+ openDate + ", closeDate=" + closeDate + ", routeStoppages=" + routeStoppages + "]";
+				+ openDate + ", closeDate=" + closeDate + "]";
 	}
 
-	
 
-
-	
-	
-
-	
 
 }

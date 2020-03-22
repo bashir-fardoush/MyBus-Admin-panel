@@ -27,28 +27,31 @@ public class RouteStoppage {
 	@JoinColumn(name="stoppage_id")
 	private Stoppage stoppage; 
 	
+	/*Serial number for the stoppage in context of specific route**/	 
 	@Column(name = "route_stoppage_serial", updatable = true, nullable = false)
 	private int routeStoppageSerial;
+	
+	/**
+	 * Edge time refers required time to reach from previous stoppage to current stoppage
+	 * 
+	 * Time Unit: Minute
+	 * */
+	@Column(name = "rs_edge_time", updatable=true, nullable=false)
+	private int edgeTime;
 
+	/**How much time bus will wait in this stoppage*/
+	@Column(name = "rs_wait_time", updatable=true, nullable=false)
+	private int waitTime;
+	
+	/**Stoppage is active for specific route or not**/
+	@Column(name= "route_stoppage_isActive", updatable=true, nullable=false)
+	private int isActive;
+	
 	public RouteStoppage() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 
-	public RouteStoppage(int routeStoppageId, Route route, Stoppage stoppage, int routeStoppageSerial) {
-		super();
-		this.routeStoppageId = routeStoppageId;
-		this.route = route;
-		this.stoppage = stoppage;
-		this.routeStoppageSerial = routeStoppageSerial;
-	}
-
-	public RouteStoppage(Route route, Stoppage stoppage, int routeStoppageSerial) {
-		super();
-		this.route = route;
-		this.stoppage = stoppage;
-		this.routeStoppageSerial = routeStoppageSerial;
-	}
 
 	public int getRouteStoppageId() {
 		return routeStoppageId;
@@ -80,6 +83,34 @@ public class RouteStoppage {
 
 	public void setRouteStoppageSerial(int routeStoppageSerial) {
 		this.routeStoppageSerial = routeStoppageSerial;
+	}
+
+	public int getEdgeTime() {
+		return edgeTime;
+	}
+
+	public void setEdgeTime(int edgeTime) {
+		this.edgeTime = edgeTime;
+	}
+
+	public int getWaitTime() {
+		return waitTime;
+	}
+
+
+	public void setWaitTime(int waitTime) {
+		this.waitTime = waitTime;
+	}
+
+
+
+	public int getIsActive() {
+		return isActive;
+	}
+
+
+	public void setIsActive(int isActive) {
+		this.isActive = isActive;
 	}
 	
 	

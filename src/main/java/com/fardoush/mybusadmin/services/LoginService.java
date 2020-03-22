@@ -9,7 +9,7 @@ import javax.persistence.criteria.Root;
 import org.hibernate.HibernateException;
 import org.springframework.stereotype.Service;
 
-import com.fardoush.mybusadmin.configs.HibernateConfig;
+import com.fardoush.mybusadmin.configs.persistance.HibernateConfig;
 import com.fardoush.mybusadmin.models.Bus;
 import com.fardoush.mybusadmin.models.Driver;
 import com.fardoush.mybusadmin.models.Route;
@@ -29,7 +29,7 @@ public class LoginService {
 		this.hibernateConfig = hibernateConfig;
 	}
 	
-
+/*
 	
 	public void Adduser() {
 		
@@ -198,6 +198,6 @@ public void addBus() {
 	}
 	
 
-	
+	*/
 
 }
